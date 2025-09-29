@@ -7,10 +7,14 @@ research skills to determine how to convert from MPG to L/100km.
 Then create a program that reads a value from the user in American units
 and display the equivalent fuel efficiency in Canadian units.
 """
+
+"""
 print("Enter MPG:")
 MPG=input()
 L/100km(MPG*235.215)
 print("L/100km =" L/100km)
+"""
+
 """
 Exercise 12:  Distance Between Two Points on Earth
 The surface of the Earth is curved, and the distance between degrees
@@ -37,6 +41,8 @@ need to convert the user's input from degrees to radians before computing
 the distance with the formula discussed previously.  The math module 
 contains a function named RADIANS which converts from degrees to radians.
 """
+
+"""
 print("Enter latitude point 1:" t1)
 print("latitude point 2:" g1)
 print("enter longitude point 1:" t2)
@@ -48,6 +54,9 @@ g2=input()
 var=distance
 distance=(6371.01 x arccos(sin(t1) x sin(t2) + cos(t1) x cos(t2) x cos(g1-g2)))
 print(distance)
+"""
+
+
 """
 Exercise 13: Making Change
 Consider the software that runs on a self-checkout machine.  One task that
