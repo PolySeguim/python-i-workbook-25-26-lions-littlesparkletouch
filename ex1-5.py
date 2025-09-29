@@ -1,4 +1,3 @@
-
 """
 Exercise 1:  Mailing Address
 Create a program that displays your name and complete mailing 
@@ -6,18 +5,16 @@ address formatted in the manner that you would usually see it
 on the outside of an envelope.  Your program does not need to 
 read any input from the user.  (9 lines)
 """
-print("Victoria")
-print("8630 S Cove Dr")
-print("Cincinnati OH, 45039")
+mailingName = input("What is the mailing name?")
+print("\n", mailingName, " \n123 No House Way \nNowhere, Texas 12345")
 """
 Exercise 2:  Hello
 Write a program that asks the user to enter his or her name.  
 The program should respond with a message that says hello to 
 the user, using his or her name.  (9 lines)
 """
-print("Please enter your name:")
-name=input()
-print("Hello " + name)
+name=input("Please enter your name: ")
+print("Hello", name,"!")
 """
 Exercise 3:  Area of a Room
 Write a program that asks the user to enter the width and 
@@ -28,14 +25,10 @@ numbers.  Include units in your prompt and output message;
 either feet or meters, depending on which unit you are more 
 comfortable working with.  (13 lines)
 """
-def areaRoom():
-    print("Area of Room")
-    units = input("What units are you using?  feet or meters: ")
-    width = float(input("Width: "))
-    length = float(input("Length: "))
-
-    areaRoom = width*length
-    print("Area of the room is " + str(areaRoom) + " " + units + " squared")
+widthRoom = input("Please enter the width of the room: ")
+lengthRoom = input("Please enter the length of the room: ")
+areaRoom = float(widthRoom) * float(lengthRoom)
+print(areaRoom , "square feet")
 
 """
 Exercise 4:  Area of a Field
@@ -44,7 +37,11 @@ farmer’s field from the user in feet.  Display the
 area of the field in acres.  
 Hint: There are 43,560 square feet in an acre
 """
-
+widthField = input("Please enter the width of the field in feet: ")
+lengthField =input("Please enter the length of the field in feet: ")
+areaField= float(widthField) * float(lengthField)
+acresField = areaField/43560
+print(acresField , " acres")
 """
 Exercise 5:  Bottle Deposits
 In many jurisdictions a small deposit is added to drink 
@@ -58,14 +55,15 @@ and displaying the refund that will be received for returning
 those containers.  Format the output so that it includes a dollar 
 sign and always displays exactly two decimal places.  (15 lines)
 """
+()
 
 def bottleDeposits():
     # reads the number of bottles
     numOneLiterBottle = int(input("Number of 1L bottles: "))
     numMoreOneLiterBottle = int(input("Number of more than 1L bottles: "))
-    refund = numMoreOneLiterBottle*0.25+numOneLiterBottle*0.1
+    refund = numMoreOneLiterBottle * 0.25 + numOneLiterBottle * 0.1
     refund = round(refund, 2)
-    print("Your refund will be: $", "{:.2f}".format(refund))
+    print("Your refund will be: $", refund)
     # adding everything greater than 1
 
 
