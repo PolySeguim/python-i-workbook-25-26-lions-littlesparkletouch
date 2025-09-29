@@ -67,9 +67,9 @@ The two dollar coin, referred to as a toonie, was introduced 9 years later.
 It's name is derived from the combination of the number two
 and the name of the loonie.
 """
-cents(input)
-print("Number of cents:" cents)
-change
+cents = int(input("Enter number of cents: "))
+print("Number of cents: ", cents)
+#change
 
 
 """
@@ -83,12 +83,17 @@ compute and display the equivalent number of centimeters.
 *** HINT ***
 One foot is 12 inches.  One inch is 2.54 centimeters.
 """
+
+"""
 Feet(input)
 print("enter your height in feet:" Feet)
 Inches(input)
 print("enter any remaining inches:" Inches)
 FinalHeight=(Feet*12)*2.54+Inches*2.54
 print(FinalHeight "cm")
+"""
+
+
 """
 Exercise 15:  Distance Units
 In this exercise, you will create a program that begins by reading
@@ -100,6 +105,8 @@ the equivalent distance in inches, yards, and miles.
 36 inches = 1 yard = 0.00056818 miles
 63360 inches = 1760 yards = 1 mile
 """
+
+"""
 feet(input)
 print("Enter feet:" feet)
 inches=feet*12
@@ -108,5 +115,8 @@ miles=yards*0.00001578
 print(inches "in")
 print(yards "yd")
 print(miles "mi")
+
+"""
+
 if __name__ == "__main__":
     print("Hello World!")
