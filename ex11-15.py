@@ -1,3 +1,10 @@
+import math
+from math import radians
+from math import log10
+from math import pow
+from math import sin
+from math import cos
+from math import acos
 """
 Exercise 11: Fuel Efficiency
 In the United States, fuel efficiency for vehicles is normally expressed
@@ -7,13 +14,9 @@ research skills to determine how to convert from MPG to L/100km.
 Then create a program that reads a value from the user in American units
 and display the equivalent fuel efficiency in Canadian units.
 """
-
-"""
-print("Enter MPG:")
-MPG=input()
-L/100km(MPG*235.215)
-print("L/100km =" L/100km)
-"""
+MPG = input("Enter MPG:")
+km = float(MPG)*235.215
+print("L/100km =" , km)
 
 """
 Exercise 12:  Distance Between Two Points on Earth
@@ -41,22 +44,16 @@ need to convert the user's input from degrees to radians before computing
 the distance with the formula discussed previously.  The math module 
 contains a function named RADIANS which converts from degrees to radians.
 """
-
-"""
-print("Enter latitude point 1:" t1)
-print("latitude point 2:" g1)
-print("enter longitude point 1:" t2)
-print("longitude point 2:" g2)
-t1=input()
-g1=input()
-t2=input()
-g2=input()
-var=distance
-distance=(6371.01 x arccos(sin(t1) x sin(t2) + cos(t1) x cos(t2) x cos(g1-g2)))
-print(distance)
-"""
-
-
+t1 = input("Enter latitude point 1:")
+g1 = input("Enter longitude point 1:")
+t2 = input("Enter latitude point 2:")
+g2 = input("Enter longitude point 2:")
+t1 = radians(float(t1))
+g1 = radians(float(g1))
+t2 = radians(float(t2))
+g2 = radians(float(g2))
+distance = 6371.01 * acos(sin(t1) * sin(t2) + cos(t1) * cos(t2) * cos(g1 - g2))
+print(distance , "km")
 """
 Exercise 13: Making Change
 Consider the software that runs on a self-checkout machine.  One task that
@@ -76,9 +73,8 @@ The two dollar coin, referred to as a toonie, was introduced 9 years later.
 It's name is derived from the combination of the number two
 and the name of the loonie.
 """
-cents = int(input("Enter number of cents: "))
-print("Number of cents: ", cents)
-#change
+cents = input("Enter number of cents:")
+
 
 
 """
