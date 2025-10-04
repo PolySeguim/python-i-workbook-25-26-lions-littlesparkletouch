@@ -18,7 +18,7 @@ def Area_Volume():
     print("Area of circle:" , AreaCircle)
     print("Volume of sphere:" , VolumeSphere)
 
-#Area_Volume()
+Area_Volume()
 """
 Exercise 17:  Heat Capacity
 The amount of energy required to increase the temperature of one gram of 
@@ -55,7 +55,7 @@ def Heat_Capacity():
     CostElectricity = EnergyRequiredKWh * 0.089 
     print("Cost of heating the water: $", round(CostElectricity, 2))
     
-#Heat_Capacity()
+Heat_Capacity()
 """
 Exercise 18:  Volume of a Cylinder
 The volume of a cylinder can be computed by multiplying the area of its 
@@ -71,7 +71,7 @@ def Volume_Cylinder():
     FinalVolCylinder = round(VolumeCylinder, 1)
     print("Volume of the cylinder:" , FinalVolCylinder)
     
-#Volume_Cylinder()
+Volume_Cylinder()
 """
 Exercise 19:  Free Fall
 Create a program that determines how quickly an object is traveling when it 
@@ -89,7 +89,7 @@ def Free_Fall():
     FinalSpeed = (InitialSpeed**2 +2 * float(Acceleration)*(float(Height)))**(1/2)
     print("Final speed when it hits the ground:" , FinalSpeed , "m/s")
 
-#Free_Fall()
+Free_Fall()
 """
 Exercise 20: Ideal Gas Law
 The ideal gas law is a mathematical approximation of the behavior of gasses as 
@@ -113,6 +113,15 @@ by 5/9 and then add 273.15 to it.
 
 (19 lines)
 """
-
+def Ideal_Gas_Law():
+    Pressure = input("Enter the pressure in Pascals:")
+    Volume = input("Enter the volume in liters:")
+    Temp = input("Enter the temperature in Celsius:")
+    R = float(8.314)
+    TempKelvin = float(Temp) + 273.15
+    MolesGas = (float(Pressure) * float(Volume)) / (R * TempKelvin)
+    print("Amount of gas in moles:" , MolesGas)
+    
+Ideal_Gas_Law()
 if __name__ == "__main__":
     print("Hi there!")
