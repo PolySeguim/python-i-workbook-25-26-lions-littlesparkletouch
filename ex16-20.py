@@ -1,3 +1,5 @@
+import math
+from math import pi
 
 """
 Exercise 16:  Area and Volume
@@ -9,7 +11,14 @@ module in your calculations.
 Hint:  The are of  circle is computed using the formula area = pi*r**2.  The 
 volume of a sphere is computed using the formula volume = 4/3 * pi * r**3.
 """
+def Area_Volume():
+    r=input("Enter radius:")
+    AreaCircle= pi * float(r)**2
+    VolumeSphere= (4/3) * pi * float(r)**3
+    print("Area of circle:" , AreaCircle)
+    print("Volume of sphere:" , VolumeSphere)
 
+#Area_Volume()
 """
 Exercise 17:  Heat Capacity
 The amount of energy required to increase the temperature of one gram of 
@@ -35,7 +44,18 @@ Hint:  You will need to look up the factor for converting between Joules
 and kilowatt hours to complete the last part of this exercise.
 (25 lines)
 """
-
+def Heat_Capacity():
+    MassWater = input("Enter the mass of the water in grams:")
+    TempChange = input("Enter the temperature change in degrees Celsius:")
+    SpecificHeatCapacity = 4.186
+    EnergyRequired = float(MassWater) * SpecificHeatCapacity * float(TempChange)
+    print("Energy required (in Joules):" , EnergyRequired)
+    # converting Joules to kilowatt hours
+    EnergyRequiredKWh = EnergyRequired / 3600000
+    CostElectricity = EnergyRequiredKWh * 0.089 
+    print("Cost of heating the water: $", round(CostElectricity, 2))
+    
+#Heat_Capacity()
 """
 Exercise 18:  Volume of a Cylinder
 The volume of a cylinder can be computed by multiplying the area of its 
@@ -44,7 +64,14 @@ cylinder, along with its height, from the user and computes its volume.
 Display the result rounded to one decimal place.
 (15 lines)
 """
-
+def Volume_Cylinder():
+    Radius = input("Enter the radius of the cylinder:")
+    Height = input("Enter the height of the cylinder:")
+    VolumeCylinder = pi * float(Radius)**2 *float(Height)
+    FinalVolCylinder = round(VolumeCylinder, 1)
+    print("Volume of the cylinder:" , FinalVolCylinder)
+    
+#Volume_Cylinder()
 """
 Exercise 19:  Free Fall
 Create a program that determines how quickly an object is traveling when it 
@@ -55,8 +82,14 @@ use the formula vf = (vi**2 + 2ad)**(1/2) to compute the final speed vf,
 when the initial speed, vi, acceleration, a, and distance, d, are known.
 (16 lines)
 """
+def Free_Fall():
+    Height = input("Enter the height from which the object is dropped in meters:")
+    InitialSpeed = 0
+    Acceleration = float(9.81)
+    FinalSpeed = (InitialSpeed**2 +2 * float(Acceleration)*(float(Height)))**(1/2)
+    print("Final speed when it hits the ground:" , FinalSpeed , "m/s")
 
-
+#Free_Fall()
 """
 Exercise 20: Ideal Gas Law
 The ideal gas law is a mathematical approximation of the behavior of gasses as 

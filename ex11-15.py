@@ -14,9 +14,12 @@ research skills to determine how to convert from MPG to L/100km.
 Then create a program that reads a value from the user in American units
 and display the equivalent fuel efficiency in Canadian units.
 """
-MPG = input("Enter MPG:")
-km = float(MPG)*235.215
-print("L/100km =" , km)
+def Fuel_Efficiency():
+    MPG = input("Enter MPG:")
+    km = float(MPG)*235.215
+    print("L/100km =" , km)
+
+Fuel_Efficiency()
 
 """
 Exercise 12:  Distance Between Two Points on Earth
@@ -44,16 +47,19 @@ need to convert the user's input from degrees to radians before computing
 the distance with the formula discussed previously.  The math module 
 contains a function named RADIANS which converts from degrees to radians.
 """
-t1 = input("Enter latitude point 1:")
-g1 = input("Enter longitude point 1:")
-t2 = input("Enter latitude point 2:")
-g2 = input("Enter longitude point 2:")
-t1 = radians(float(t1))
-g1 = radians(float(g1))
-t2 = radians(float(t2))
-g2 = radians(float(g2))
-distance = 6371.01 * acos(sin(t1) * sin(t2) + cos(t1) * cos(t2) * cos(g1 - g2))
-print(distance , "km")
+def Distance_Between_Two_Points():
+    t1 = input("Enter latitude point 1:")
+    g1 = input("Enter longitude point 1:")
+    t2 = input("Enter latitude point 2:")
+    g2 = input("Enter longitude point 2:")
+    t1 = radians(float(t1))
+    g1 = radians(float(g1))
+    t2 = radians(float(t2))
+    g2 = radians(float(g2))
+    distance = 6371.01 * acos(sin(t1) * sin(t2) + cos(t1) * cos(t2) * cos(g1 - g2))
+    print(distance , "km")
+
+Distance_Between_Two_Points()
 """
 Exercise 13: Making Change
 Consider the software that runs on a self-checkout machine.  One task that
@@ -73,10 +79,29 @@ The two dollar coin, referred to as a toonie, was introduced 9 years later.
 It's name is derived from the combination of the number two
 and the name of the loonie.
 """
-cents = input("Enter number of cents:")
+def Making_Change():
+    cents = input("Enter number of cents:")
+    toonies = int(float(cents) // 200)
+    loonies = int((float(cents) % 200) // 100)
+    quarters = int(((float(cents) % 200) % 100) // 25)
+    dimes = int((((float(cents) % 200) % 100) % 25) // 10)
+    nickels = int(((((float(cents) % 200) % 100) % 25) % 10) // 5)
+    pennies = int(((((float(cents) % 200) % 100) % 25) % 10) % 5) // 1
+    #what i did before:
+    #pennies = float(cents) // 1    
+    #nickels = (float(cents) % 1) // 5
+    #dimes = ((float(cents) % 1) % 5) // 10
+    #quarters = (((float(cents) % 1) % 5) % 10)
+    #loonies = ((((float(cents) % 1) % 5) % 10) % 25) // 100
+    #toonies = (((((float(cents) % 1) % 5) % 10) % 25) % 100) // 200
+    print("Pennies:" , pennies)
+    print("Nickels:" , nickels)
+    print("Dimes:" , dimes)
+    print("Quarters:" , quarters)
+    print("Loonies:" , loonies)
+    print("Toonies:" , toonies)
 
-
-
+Making_Change()
 """
 Exercise 14:  Height Units
 Many people think about their height in feet and inches, even in some
@@ -88,17 +113,13 @@ compute and display the equivalent number of centimeters.
 *** HINT ***
 One foot is 12 inches.  One inch is 2.54 centimeters.
 """
+def Height_Units():
+    feetHeight = input("Enter your height in feet:")
+    inchesHeight = input("Enter any remaining inches:")
+    FinalPersonHeight = (float(feetHeight) * 12) * 2.54 + (float(inchesHeight) * 2.54)
+    print(FinalPersonHeight , "cm")
 
-"""
-Feet(input)
-print("enter your height in feet:" Feet)
-Inches(input)
-print("enter any remaining inches:" Inches)
-FinalHeight=(Feet*12)*2.54+Inches*2.54
-print(FinalHeight "cm")
-"""
-
-
+Height_Units()
 """
 Exercise 15:  Distance Units
 In this exercise, you will create a program that begins by reading
@@ -111,16 +132,17 @@ the equivalent distance in inches, yards, and miles.
 63360 inches = 1760 yards = 1 mile
 """
 
-"""
-feet(input)
-print("Enter feet:" feet)
-inches=feet*12
-yards=inches*0.2777778
-miles=yards*0.00001578
-print(inches "in")
-print(yards "yd")
-print(miles "mi")
+def Distance_Units(): 
+    feetEntered = input("Enter feet:")
+    inchesDisplayed = float(feetEntered) * 12
+    yardsDisplayed = float(feetEntered) * 0.3333333
+    milesDisplayed = float(feetEntered) * 0.000189394
+    print(inchesDisplayed , "in")
+    print(yardsDisplayed , "yd")
+    print(milesDisplayed , "mi")
 
+Distance_Units()
+"""
 """
 
 if __name__ == "__main__":

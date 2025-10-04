@@ -5,16 +5,22 @@ address formatted in the manner that you would usually see it
 on the outside of an envelope.  Your program does not need to 
 read any input from the user.  (9 lines)
 """
-mailingName = input("What is the mailing name?")
-print("\n", mailingName, " \n123 No House Way \nNowhere, Texas 12345")
+def Mailing_Address():  
+    mailingName = input("What is the mailing name?")
+    print("\n", mailingName, " \n123 No House Way \nNowhere, Texas 12345")
+
+Mailing_Address()
 """
 Exercise 2:  Hello
 Write a program that asks the user to enter his or her name.  
 The program should respond with a message that says hello to 
 the user, using his or her name.  (9 lines)
 """
-name=input("Please enter your name: ")
-print("Hello", name,"!")
+def Hello():
+    name=input("Please enter your name: ")
+    print("Hello", name,"!")
+
+Hello()
 """
 Exercise 3:  Area of a Room
 Write a program that asks the user to enter the width and 
@@ -25,11 +31,13 @@ numbers.  Include units in your prompt and output message;
 either feet or meters, depending on which unit you are more 
 comfortable working with.  (13 lines)
 """
-widthRoom = input("Please enter the width of the room: ")
-lengthRoom = input("Please enter the length of the room: ")
-areaRoom = float(widthRoom) * float(lengthRoom)
-print(areaRoom , "square feet")
+def Area_Room():
+    widthRoom = input("Please enter the width of the room: ")
+    lengthRoom = input("Please enter the length of the room: ")
+    areaRoom = float(widthRoom) * float(lengthRoom)
+    print(areaRoom , "square feet")
 
+Area_Room()
 """
 Exercise 4:  Area of a Field
 Create a program that reads the length and width of a 
@@ -37,11 +45,14 @@ farmer’s field from the user in feet.  Display the
 area of the field in acres.  
 Hint: There are 43,560 square feet in an acre
 """
-widthField = input("Please enter the width of the field in feet: ")
-lengthField =input("Please enter the length of the field in feet: ")
-areaField= float(widthField) * float(lengthField)
-acresField = areaField/43560
-print(acresField , " acres")
+def Area_Field():
+    widthField = input("Please enter the width of the field in feet: ")
+    lengthField =input("Please enter the length of the field in feet: ")
+    areaField= float(widthField) * float(lengthField)
+    acresField = areaField/43560
+    print(acresField , " acres")
+    
+Area_Field()
 """
 Exercise 5:  Bottle Deposits
 In many jurisdictions a small deposit is added to drink 
@@ -55,9 +66,7 @@ and displaying the refund that will be received for returning
 those containers.  Format the output so that it includes a dollar 
 sign and always displays exactly two decimal places.  (15 lines)
 """
-()
-
-def bottleDeposits():
+def bottle_Deposits():
     # reads the number of bottles
     numOneLiterBottle = int(input("Number of 1L bottles: "))
     numMoreOneLiterBottle = int(input("Number of more than 1L bottles: "))
@@ -65,12 +74,10 @@ def bottleDeposits():
     refund = round(refund, 2)
     print("Your refund will be: $", refund)
     # adding everything greater than 1
-
+bottle_Deposits()
 
     # To ensure we have two decimal places
     # number_two_decimal = "{:.2f}".format(number_string)
     # print(number_two_decimal)
-
-bottleDeposits()
 #Testing Suite
 #areaRoom()
