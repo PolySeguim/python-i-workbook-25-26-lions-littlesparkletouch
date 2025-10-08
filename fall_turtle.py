@@ -39,6 +39,8 @@ def draw_multicolor_square(t, sz, colors, thickness):
         t.color(i)
         t.forward(sz)
         t.left(90)
+
+#draw_multicolor_square()
 """
 #TEST SUITE
 def test():
