@@ -76,7 +76,7 @@ minute and text charges if the user incurred costs in these
 categories.  Ensure that all of the charges are displayed using 2
 decimal points
 """
-def Phone_Bill():
+def phone_Bill():
     minutes = input("Enter number of minutes used:")
     texts = input("Enter number of text messages sent:")
     RegularPrice = 15.00
@@ -89,7 +89,7 @@ def Phone_Bill():
     else:
         TextPrice = 0
     Base = (RegularPrice + MinutesPrice + TextPrice)
-    Tax = Base * 0.05
+    Tax = Base * 0.05 
     Final = Base + Tax + 0.44
     print("Base charge: $", RegularPrice)
     if MinutesPrice > 0:
@@ -100,4 +100,4 @@ def Phone_Bill():
     print("Tax: $", round(Tax, 2))
     print("Total bill: $" , round(Final, 2))
     
-    Phone_Bill()
+phone_Bill()
