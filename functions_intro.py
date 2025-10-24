@@ -100,20 +100,47 @@ maxInt(15, 10)
 def hypotenuse(a, b):
     c = math.sqrt(a**2 + b**2)
     return c
-#hypotenuse(3,4)
+
+hypotenuse(3,4)
 
 #A fruitful sloipe function that returns the slope of a line given 4 parametersn (x1, x2, y1, y2)
 
+def slope(x1, x2, y1, y2):
+    m = (y2 - y1) / (x2 - x1)
+    return m
+
+slope(3,2,5,1)
 
 #A fruitful intercept function that returns the y-intercept given the two points (x1, x2, y1, y2)
 #****This function should call the slope function in order to calculate the y-intercept or b-value
 
+def y_intercept(x1, x2, y1, y2):
+    m = slope(x1, x2, y1, y2)
+    b = y1 - m * x1
+    return b
+
+y_intercept(1,2,3,4)
 
 #A fruitful fucntion that will calculate whether a numver is a factor of another number
 #**returns a BOOLEAN (returns true or false)
 #*** Is 3 a factor of 9?
 
+def factor1():
+    if 9 % 3 == 0:
+        return True
+    else:
+        return False
+    
+factor1()
 
 #A fruitful fucntion that will calculate whether a numver is a factor of another number
 #***is 12 a facror of 9
 #***return a boolean (true or false)
+
+def factor2():
+    if 9 % 12 == 0:
+        return True
+    else:
+        return False
+    
+factor2()
