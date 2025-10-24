@@ -1,9 +1,9 @@
 #all import statements at the top of the file
 import math
-from math import sqrt sum 
-
-"""Functions are either void or fruitful
-    """
+"""
+"""
+#Functions are either void or fruitful
+"""
 #Global variablilty
 f_name = ""
 
@@ -23,29 +23,36 @@ setName("Tess")
 #Function header: writing why
 sum(list of numbers)
     #function <-- adds up a list of numbers
-return int sum
+
 author: Poly (10/8/2025)
 
-    Returns:
-        _type_: _description_
+Returns:
+_type_: _description_
 
 name = getName()
 print("Hi" , name)
 
 def getName():
+
+getName()
     
 def sum(numbers):
     sum = 0
     for i in numbers::
-        sum += i
+    sum += i
         #print(sum)
     return sum
 
-def (absoluteValue(x)):
+sum()
+
+def absoluteValue(x):
     if x < 0:
         return -x #the return statement exits the function
     else:
         return x
+    
+absoluteValue(-8)
+
     
 def distance(x1, y1, x2, y2):
     dist = math.sqrt((x2 - x1)**2 + (y2 - y1)**2)
@@ -72,24 +79,28 @@ num1 = 1,2,3,4,5
 print(absVal(-23))
 
 print(distance(1,2,3,4))
-
+"""
+"""
+"""
+  
 #A fruitful function that compares integers and ***returns the largest integers
 def maxInt(a, b):
     if a > b:
         return a
+    elif a == b:
+        return "The numbers are equal"
     else:
-        return b    
-return(maxInt(10, 20))   
+        return b       
 
-maxInt(10,20)
+maxInt(15, 10)
+
 
 #A fruitul hypotenuse function that ***returns the calue of the hypotenuse given the a and b values 
 
 def hypotenuse(a, b):
     c = math.sqrt(a**2 + b**2)
     return c
-hypotenuse(3,4)
-print(hypotenuse(3,4))
+#hypotenuse(3,4)
 
 #A fruitful sloipe function that returns the slope of a line given 4 parametersn (x1, x2, y1, y2)
 
