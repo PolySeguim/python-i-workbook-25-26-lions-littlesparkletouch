@@ -40,6 +40,8 @@ print(truth (True, True, True))
 """
 Number 2: Circle Area
 """
+#I didn't know how to do this without the input, but it obviously can just be called, so idk why I was being stupid
+a
 import math
 from math import pi
 def circle_area(radius):
