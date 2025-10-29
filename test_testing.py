@@ -55,7 +55,7 @@ Number 3: Passwords
 """
 #I didn't even realize i was a thing I could use, but now I understand it yay!
 def passwords(password):
-    for i in range 3:
+    for i in range (3):
         attempt = input("Enter your password:")
         if attempt == password:
             print("You have successfully logged in.")
@@ -85,7 +85,7 @@ Number 6: What will the code print
 #I didn't even know what the code was
 #I guessed and idk how to make it run so i still don't know what it does
 def test():
-    for i in [12, 16, 17 24, 29]:
+    for i in [12, 16, 17, 24, 29]:
         if i % 2 == 1:
             break
         print(i)
@@ -108,6 +108,7 @@ def test2():
 Number 8: Code
 """
 #I'm guessing I was right since there's the red squiggly lines under tha print, so it can't print so bang.
+"""
 def test3():
     x=5
     if x==5:
@@ -118,12 +119,12 @@ def test3():
         print "X is now LESS than five!"
         
 test3()
-
+"""
 """
 Number 9: Code again
 """
 #I guessed it was a turtle that made a square.
-def functionA(T, side, num):
+def functionA(t, side, num):
     for i in range(num):
         square(t, side)
         t.penup()
