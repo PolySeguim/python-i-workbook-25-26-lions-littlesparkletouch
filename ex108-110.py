@@ -10,7 +10,69 @@ entered by the user. For example, if the user enters the values
 -4, -1, -2, 0 ,0 , 3, and 1. Your program should display each value
 on its own line.
 """
-def 
+def readInteger():
+    integers = []
+    
+    user_input = int(input("Enter an integer:"))
+    while user_input != "":
+        integers.append(user_input)
+        print(integers)
+        
+        user_input = int(input("Enter an integer:"))
+    return integers
+
+readInteger()
+
+def displayIntegers():
+    negatives = []
+    zeros = []
+    positives = []
+    
+    for number in readInteger():
+        if number < 0:
+            negatives.append(number)
+        elif number == 0:
+            zeros.append(number)
+        else:
+            positives.append(number)
+    
+    return negatives , zeros, positives
+
+displayIntegers()
+
+"""
+def displayIntegers():
+    negatives = []
+    zeros = []
+    positives = []
+    
+    for number in readInteger():
+        if number < 0:
+            negatives.append(number)
+        elif number == 0:
+            zeros.append(number)
+        else:
+            positives.append(number)
+    
+    for number in negatives + zeros + positives:
+        print(number)
+        
+displayIntegers()
+"""
+"""
+def in_Order():
+    integers = readInteger()
+    negatives = [num for num in integers if num < 0]
+    zeros = [num for num in integers if num == 0]
+    positives = [num for num in integers if num > 0]
+    
+    return negatives , zeros , positives
+    
+
+in_Order()
+
+"""
+
 """
 Exercise 109: List of Proper Divisors
 A proper divisor of a positive integer, n, is a positive integer
@@ -24,6 +86,7 @@ displaying the list of its proper divisors. Ensure that your main
 program only runs when your solution has not been imported into
 another file
 """
+
 """
 Exercise 110: Perfect Numbers
 An integer, n, is said to be perfect when the sum of all the proper
