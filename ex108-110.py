@@ -10,15 +10,16 @@ entered by the user. For example, if the user enters the values
 -4, -1, -2, 0 ,0 , 3, and 1. Your program should display each value
 on its own line.
 """
+
+integers = []
 def readInteger():
-    integers = []
+
     
-    user_input = int(input("Enter an integer:"))
+    user_input = input("Enter an integer:")
     while user_input != "":
-        integers.append(user_input)
-        print(integers)
-        
-        user_input = int(input("Enter an integer:"))
+        userInput = int(user_input)
+        integers.append(userInput)
+        user_input = input("Enter an integer:")
     return integers
 
 readInteger()
@@ -27,18 +28,16 @@ def displayIntegers():
     negatives = []
     zeros = []
     positives = []
-    
-    for number in readInteger():
+    for number in integers:
         if number < 0:
             negatives.append(number)
         elif number == 0:
             zeros.append(number)
         else:
             positives.append(number)
-    
-    return negatives , zeros, positives
+    return negatives, zeros, positives
 
-displayIntegers()
+print(displayIntegers())
 
 """
 def displayIntegers():
@@ -86,7 +85,7 @@ displaying the list of its proper divisors. Ensure that your main
 program only runs when your solution has not been imported into
 another file
 """
-
+def 
 """
 Exercise 110: Perfect Numbers
 An integer, n, is said to be perfect when the sum of all the proper
