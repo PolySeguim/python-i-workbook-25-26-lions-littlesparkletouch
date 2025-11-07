@@ -85,7 +85,14 @@ displaying the list of its proper divisors. Ensure that your main
 program only runs when your solution has not been imported into
 another file
 """
-def 
+def proper_Divisors(n):
+    dividee = input("Enter a positive integer:")
+    divisors = []
+    for i in range(1, n):
+        if n % i == 0:
+            divisors.append(i)
+    return divisors
+    print("")
 """
 Exercise 110: Perfect Numbers
 An integer, n, is said to be perfect when the sum of all the proper
