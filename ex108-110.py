@@ -22,7 +22,7 @@ def readInteger():
         user_input = input("Enter an integer:")
     return integers
 
-readInteger()
+#readInteger()
 
 def displayIntegers():
     negatives = []
@@ -37,8 +37,10 @@ def displayIntegers():
             positives.append(number)
     return negatives, zeros, positives
 
-print(displayIntegers())
+#print(displayIntegers())
 
+
+#This below is all wrong.
 """
 def displayIntegers():
     negatives = []
@@ -91,8 +93,9 @@ def proper_Divisors(n):
     for i in range(1, n):
         if n % i == 0:
             divisors.append(i)
+    print(proper_Divisors(n= dividee))
     return divisors
-    print("")
+
 """
 Exercise 110: Perfect Numbers
 An integer, n, is said to be perfect when the sum of all the proper
