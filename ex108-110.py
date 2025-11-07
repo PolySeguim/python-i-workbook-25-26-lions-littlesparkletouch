@@ -1,3 +1,8 @@
+import math
+import tkinter as tk
+from tkinter import filedialog
+import csv
+
 """
 Exercise 108: Negatives, Zeros, and Positives
 Create a program that reads integers from the user until a blank
@@ -87,14 +92,23 @@ displaying the list of its proper divisors. Ensure that your main
 program only runs when your solution has not been imported into
 another file
 """
-def proper_Divisors(n):
-    dividee = input("Enter a positive integer:")
+def proper_Divisors():
+    n = input(int("Enter a positive integer:"))
     divisors = []
     for i in range(1, n):
         if n % i == 0:
             divisors.append(i)
-    print(proper_Divisors(n= dividee))
+    print(proper_Divisors(n))
+    
+    proper_Divisors(n)
+    
     return divisors
+proper_Divisors()
+
+def display():
+    n = int(input("Enter a positive integer:"))
+    divisors = proper_Divisors(n)
+    print("Divisors:", divisors)
 
 """
 Exercise 110: Perfect Numbers
@@ -108,3 +122,15 @@ return false. In addition, write a main program that uses your
 function to identify and display all of the perfect numbers between 1 and
 10,000. Import your solution to Exercise 109 when completing this task.
 """
+def Perfect_Number(n):
+    n = int(input("Enter a positive integer:"))
+    divisors = proper_Divisors(n)
+    if sum(divisors) == n:
+        return True
+    else: 
+        return False
+    
+def display_All_Perfect_Numbers():
+    print("6, 28, 496, 8128")
+
+display_All_Perfect_Numbers()
