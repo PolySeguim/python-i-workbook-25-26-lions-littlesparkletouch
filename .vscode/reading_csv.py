@@ -48,7 +48,7 @@ def min_value(list_of_values):
     return min(list_of_values)
 
 def sugars_per_resaurant(list_of_values, restaurant_name):
-    sugars_per={}
+    sugars_per=[]
     for i in range(len(restaurants)):
         if (restaurants[i] == restaurant_name):
             sugars_per.append(sugars[i])
@@ -100,5 +100,7 @@ print("Max Sugars:", max_sugars)
 min_sugars = min_value(sugars)
 print("Min Sugars:", min_sugars)
 
+"""
 #Sugar per restaurant
 print("Sugars for Burger King:", sugars_per_resaurant(sugars, "Burger King"))
+"""
