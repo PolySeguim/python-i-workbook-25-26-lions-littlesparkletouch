@@ -98,6 +98,30 @@ def findFatInRestaurant(restaurant_name):
     return fats_in_restaurant
 findFatInRestaurant("Burger King")
 
+def findCaloriesInRestaurant(restaurant_name):
+    calories_in_restaurant = []
+    for i in range(len(restaurants)):
+        if (restaurants[i] == restaurant_name):
+            calories_in_restaurant.append(calories[i])
+    return calories_in_restaurant
+findCaloriesInRestaurant("Wendy's")
+
+def SodiumInRestaurant(restaurant_name):
+    sodium_in_restaurant = []
+    for i in range(len(restaurants)):
+        if (restaurants[i] == restaurant_name):
+            sodium_in_restaurant.append(sodiums[i])
+    return sodium_in_restaurant
+SodiumInRestaurant("Taco Bell")
+
+def servingSizeInRestaurant(restaurant_name):
+    serving_size_in_restaurant = []
+    for i in range(len(restaurants)):
+        if (restaurants[i] == restaurant_name):
+            serving_size_in_restaurant.append(serving_sizes[i])
+    return serving_size_in_restaurant
+servingSizeInRestaurant("Jack in the Box")
+
 #Average Calories
 average_calories = calculateAverages(calories)
 print("Average Calories:", average_calories)
