@@ -1,10 +1,6 @@
-a=9
-while a>0:
-    print(a)
-    a-=1
-    
-    if a==1:
-        break
-    
-    else:
-        print("Reached 0")
+def print_odd_numbers():
+    for i in range(100):
+        if i % 2 != 0:
+            print (i)
+        else:
+            return False
