@@ -1,6 +1,14 @@
-def print_odd_numbers():
-    for i in range(100):
-        if i % 2 != 0:
-            print (i)
+def store_values():
+    values = []
+    
+    while True:
+        num = int(input("Enter a number (0 to stop): "))
+        
+        if num == 0:
+            break
+        elif num >0:
+            values.append(num)
         else:
-            return False
+            print("Please enter a positive number or 0 to stop.")
+    print(values)
+store_values()
